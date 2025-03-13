@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Filmes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2d2d2d; /* Cor de fundo mais escura */
+            color: white;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #333; /* Fundo mais escuro para a barra superior */
+        }
+        .top-bar button {
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #444; /* Cor dos botões */
+            color: white;
+            border-radius: 5px;
+        }
+        .top-bar .library {
+            background-color: #222;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 36px; /* Tamanho maior para o título principal */
+            margin-bottom: 30px;
+        }
+        h3 {
+            margin-top: 30px;
+            font-size: 24px; /* Tamanho maior para "Página Inicial" */
+            font-weight: normal;
+        }
+        h3 i {
+            margin-right: 10px;
+        }
+        .main-content h3:nth-child(2) {
+            font-size: 20px; /* Diminuir tamanho para "Busca por Filmes" */
+        }
+        .main-content h3:nth-child(3) {
+            font-size: 20px; /* Diminuir tamanho para "Filmes em Cartaz" */
+        }
+        .movies-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .movies-grid article {
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #444; /* Fundo escuro para os artigos */
+            padding: 10px;
+            width: 250px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .movies-grid article:hover {
+            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .movies-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .movies-grid h3 {
+            font-size: 18px;
+            color: #ffdf00; /* Título dos filmes em amarelo */
+            margin: 15px 0;
+        }
+        .movies-grid p {
+            font-size: 14px;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <button>Meus Favoritos</button>
+            <button>Lembrete para lançamentos</button>
+            <button>+ Nova Lista</button>
+            <button class="library">Minha Biblioteca</button>
+        </div>
+
+        <div class="main-content">
+            <h2>Catálogo de Filmes</h2>
+            <h3>Página Inicial</h3>
+            <h3><i class="fas fa-search"></i> Busca por Filmes</h3> <!-- Subtítulo com a lupa -->
+            <h3>🎬 Filmes em Cartaz</h3> <!-- Emoji de rolo de filme adicionado aqui -->
+
+            <div class="movies-grid">
+                <article>
+                    <img src="formula.jpg" alt="Brad Pitt F1">
+                    <h3>Brad Pitt F1</h3>
+                    <p>Em F1, um piloto veterano de Fórmula 1 volta da aposentadoria para ser o mentor de seu jovem colega de equipe.</p>
+                </article>
+                <article>
+                    <img src="capitaoamerica.webp" alt="Capitão América">
+                    <h3>Capitão América: O Admirável Mundo Novo</h3>
+                    <p>Capitão América: Admirável Mundo Novo é o próximo filme do famoso herói da Marvel. Desta vez, o filme dá continuidade à minissérie de televisão Falcão e o Soldado Invernal, onde o escudo está nas mãos de Sam Wilson (Anthony Mackie), após Steve Rogers (Chris Evans) o entregar em Vingadores: Ultimato.</p>
+                </article>
+                <article>
+                    <img src="ultimoalvo.webp" alt="Último Alvo">
+                    <h3>Último Alvo</h3>
+                    <p>Assombrado pelos erros do passado, um gângster busca se reaproximar dos filhos e abandonar o submundo do crime. Contudo, antigos aliados e inimigos não permitem uma saída fácil, e suas escolhas o colocam em conflito com seu desejo de mudança.</p>
+                </article>
+                <article>
+                    <img src="brancadeneve.jpeg" alt="Branca de Neve">
+                    <h3>Branca de Neve</h3>
+                    <p>No mais novo live-action Branca de Neve, quando a Rainha Má (Gal Gadot) manda matarem sua enteada por inveja de sua beleza, Branca de Neve (Rachel Zegler) foge do reino. Ela percorre a floresta e acha uma casinha onde vivem sete anões amigáveis com quem passa viver. Porém, a moça ainda não está a salvo, já que a bruxa planeja dar um fim a sua vida com uma maçã envenenada.</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
